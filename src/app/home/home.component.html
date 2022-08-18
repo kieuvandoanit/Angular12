@@ -1,4 +1,12 @@
 <div class = "test">
     <h3>Day la component home</h3>
     <h2>Hello {{ name }}</h2>
+    <input type="text" value="10">
+    <br>
+    <hr>
+    <input type="text" [value]="name" title="This is name">
+    <br>
+    <input type="text" [value]="name" title="This is {{name}}">
+    <br>
+    <input type="text" [value]="name" [title]="'This is ' + name">
 </div>
