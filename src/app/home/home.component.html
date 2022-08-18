@@ -1,7 +1,23 @@
 <div class = "test">
-    <h3>Day la component home</h3>
-    <br>
-    <input type="text" [(ngModel)]="name">
-    <h2>Hello {{name}}</h2>
-    <button (click)="resetName()">Reset name</button>
+    <h3>Day la component Home</h3>
+    <h1>Trai cay</h1>
+
+    <table class="table">
+        <tr>
+            <th>Thứ tự</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Hạ giá</th>
+        </tr>
+        <tr *ngFor="let trai of traiCay2; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{trai.ten}}</td>
+            <td class = "right">
+                <span [ngClass]="{'so-am': trai.gia < 0}">{{trai.gia}}</span>
+            </td>
+            <td class="right">
+                <span *ngIf="trai.haGia==true">Đang hạ giá!</span>
+            </td>
+        </tr>
+    </table>
 </div>
