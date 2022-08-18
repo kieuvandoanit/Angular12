@@ -2,7 +2,7 @@
     <h3>Day la component Home</h3>
     <h1>Trai cay</h1>
 
-    <table class="table">
+    <!-- <table class="table">
         <tr>
             <th>Thứ tự</th>
             <th>Tên</th>
@@ -19,5 +19,16 @@
                 <span>{{ trai.haGia | onSale | uppercase}}</span>
             </td>
         </tr>
-    </table>
+    </table> -->
+
+    Tỉnh / Thành Phố:
+    <select name="" id="city" (change)="changeCity($event)">
+        <option *ngFor="let city of cities" value="{{city.city}}">{{city.city}}</option>
+    </select>
+    <br>
+    <br>
+    Quận / Huyện:
+    <select name="" id="district">
+        <option *ngFor="let district of districts" value="{{district}}">{{district}}</option>
+    </select>
 </div>

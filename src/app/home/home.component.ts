@@ -14,6 +14,22 @@ export class HomeComponent implements OnInit {
     {ten: "Nho", gia:3, haGia: false}, 
     {ten: "Bưởi", gia: -10, haGia: true}
   ];
+  public cities = [
+    {
+      city: "Tỉnh / Thành Phố",
+      district: ["Quận / Huyện"]
+    },
+    {
+      city: "An Giang",
+      district: ["Long Xuyên", "Châu Đốc", "Tân Châu"]
+    },
+    {
+      city: "Lâm Đồng",
+      district: ["Đà Lạt", "Bảo Lộc", "Lâm Hà", "Đức Trọng"]
+    },
+  ]
+
+  public districts: string[] = ["Quận / Huyện"]
 
   constructor() { }
 
@@ -22,6 +38,22 @@ export class HomeComponent implements OnInit {
 
   public resetName(): void{
     this.name = "";
+  }
+
+  public changeCity(event: any){
+    const city = event.target.value;
+    if (!city){
+      return;
+    }
+
+    // Cach 1
+    // const search = this.cities.filter(data => data.city === city);
+    // if(search && search[0]){
+    //   this.districts = search[0].district
+    // }
+
+    //cach 2
+    this.districts = this.cities.find(data => data.city === city)?.district || [];
   }
 
 }
