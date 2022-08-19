@@ -7,18 +7,21 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { HighLightDirective } from './Directives/high-light.directive';
-
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
     AboutComponent,
     HomeComponent,
-    HighLightDirective
+    HighLightDirective,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

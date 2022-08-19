@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     this.counterBinhPhuong = this.common.binhPhuong(this.counter);
     console.log("Increase++")
     this.common.counter++;
+    console.log(this.common.counter);
   }
 
 }
