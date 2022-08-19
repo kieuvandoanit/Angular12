@@ -12,6 +12,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
+import { ChaComponent } from './cha/cha.component';
+import { ConComponent } from './con/con.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { GetDataComponent } from './get-data/get-data.component';
     HighLightDirective,
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
-    GetDataComponent
+    GetDataComponent,
+    ChaComponent,
+    ConComponent
   ],
   imports: [
     BrowserModule,
