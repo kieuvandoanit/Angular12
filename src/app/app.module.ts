@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { OnSalePipe } from './on-sale.pipe';
+// import { DoanVueButton }  from 'doan-vue-button-1';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OnSalePipe } from './on-sale.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    // DoanVueButton,
   ],
   providers: [],
   bootstrap: [AppComponent]

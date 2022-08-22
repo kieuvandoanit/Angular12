@@ -1,0 +1,1 @@
+// declare module 'doan-vue-button-1';
